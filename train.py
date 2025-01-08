@@ -11,7 +11,6 @@ import argparse
 from utils import load_data
 from model import build_model
 
-
 def train_model(data_dir, arch, learning_rate, hidden_units, epochs, save_dir, gpu):
     
     trainloader, validloader, train_datasets = load_data(data_dir)
@@ -84,6 +83,7 @@ def train_model(data_dir, arch, learning_rate, hidden_units, epochs, save_dir, g
 
 
 if __name__ == "__main__":
+    # This below code idea was taken from chatgpt
     parser = argparse.ArgumentParser(description='Train a NN')
     parser.add_argument('data_dir', help="Path to the dataset")
     parser.add_argument('--save_dir', default='', help='Path to save the checkpoint')
